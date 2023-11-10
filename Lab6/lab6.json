@@ -1,0 +1,723 @@
+[
+    {
+        "id": "9b8c2080dc32c8e7",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c4fc3f5dcadf9043",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fd2543b5b5a7fa37",
+        "type": "ui_group",
+        "name": "Umidade",
+        "tab": "c4fc3f5dcadf9043",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce412671d617b1c8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "70360b3d896b8ad2",
+        "type": "serial-port",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "b229a37ad14da01e",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "c4fc3f5dcadf9043",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "267a7b1d7bd30275",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c4fc3f5dcadf9043",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "40def4c3a6f306b2",
+        "type": "ui_group",
+        "name": "Luminosidade",
+        "tab": "c4fc3f5dcadf9043",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bdf9fd5e38fe1663",
+        "type": "json",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "471ed9792e65e6b8",
+                "3c9e6991e8819209",
+                "15dfd44ff46e2c6b",
+                "081bacd56624454b"
+            ]
+        ]
+    },
+    {
+        "id": "ba1642b3af857d66",
+        "type": "ui_gauge",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "fd2543b5b5a7fa37",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "% Umidade",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1090,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "251244c6fe92696b",
+        "type": "ui_chart",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "fd2543b5b5a7fa37",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "% Umidade",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "982c3b3ac5921c67",
+        "type": "ui_chart",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "b229a37ad14da01e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura °C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1100,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f872fb1c4534d0f",
+        "type": "ui_gauge",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "b229a37ad14da01e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura °C",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1100,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "035343594abec8e5",
+        "type": "change",
+        "z": "9b8c2080dc32c8e7",
+        "name": "temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 40,
+        "wires": [
+            [
+                "982c3b3ac5921c67",
+                "7f872fb1c4534d0f"
+            ]
+        ]
+    },
+    {
+        "id": "8dae48651ab6e3ec",
+        "type": "change",
+        "z": "9b8c2080dc32c8e7",
+        "name": "umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 180,
+        "wires": [
+            [
+                "ba1642b3af857d66",
+                "251244c6fe92696b"
+            ]
+        ]
+    },
+    {
+        "id": "046ed2cb4db82972",
+        "type": "serial out",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "serial": "70360b3d896b8ad2",
+        "x": 1590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e4e2650ca2a42af0",
+        "type": "ui_toast",
+        "z": "9b8c2080dc32c8e7",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Outliers",
+        "x": 1600,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "471ed9792e65e6b8",
+        "type": "function",
+        "z": "9b8c2080dc32c8e7",
+        "name": "baixa umidade",
+        "func": "if (msg.payload.umidade < 50) {\n    msg.payload.led = true;\n    msg.topic = \"Umidade perigosamente baixa\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "8dae48651ab6e3ec",
+                "fe4310b8bd1b5f55"
+            ]
+        ]
+    },
+    {
+        "id": "fe4310b8bd1b5f55",
+        "type": "switch",
+        "z": "9b8c2080dc32c8e7",
+        "name": "interruptor",
+        "property": "payload.led",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "jsonata"
+            },
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1370,
+        "y": 180,
+        "wires": [
+            [
+                "e4e2650ca2a42af0",
+                "046ed2cb4db82972"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ce24d98c64c911a5",
+        "type": "inject",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperatura\":30,\"umidade\":40,\"luminosidade\":100,\"led\":false}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "471ed9792e65e6b8",
+                "3c9e6991e8819209",
+                "081bacd56624454b",
+                "15dfd44ff46e2c6b"
+            ]
+        ]
+    },
+    {
+        "id": "3c9e6991e8819209",
+        "type": "function",
+        "z": "9b8c2080dc32c8e7",
+        "name": "alta temperatura",
+        "func": "if (msg.payload.temperatura > 30) {\n    msg.payload.led = true;\n    msg.topic = \"Temperatura perigosamente alta\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 40,
+        "wires": [
+            [
+                "035343594abec8e5",
+                "fe4310b8bd1b5f55"
+            ]
+        ]
+    },
+    {
+        "id": "081bacd56624454b",
+        "type": "function",
+        "z": "9b8c2080dc32c8e7",
+        "name": "baixa luminosidade",
+        "func": "if (msg.payload.luminosidade < 500) {\n    msg.payload.led = true;\n    msg.topic = \"Luminosidade abaixo do esperado\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "1197fdb34018bb02",
+                "fe4310b8bd1b5f55"
+            ]
+        ]
+    },
+    {
+        "id": "1197fdb34018bb02",
+        "type": "change",
+        "z": "9b8c2080dc32c8e7",
+        "name": "luminosidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.luminosidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 320,
+        "wires": [
+            [
+                "559dee66d6fee1cd"
+            ]
+        ]
+    },
+    {
+        "id": "7053ba31fa3e7ddf",
+        "type": "ui_gauge",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "40def4c3a6f306b2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Nível de Luminosidade",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "10",
+        "colors": [
+            "#111112",
+            "#6d6864",
+            "#ece674"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1400,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c9ecc721b8dd3a48",
+        "type": "ui_chart",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "group": "40def4c3a6f306b2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Nível de Luminosidade",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1400,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "559dee66d6fee1cd",
+        "type": "function",
+        "z": "9b8c2080dc32c8e7",
+        "name": "Filtro Luminosidade",
+        "func": "{\n    msg.payload = msg.payload/100;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 320,
+        "wires": [
+            [
+                "c9ecc721b8dd3a48",
+                "7053ba31fa3e7ddf"
+            ]
+        ]
+    },
+    {
+        "id": "15dfd44ff46e2c6b",
+        "type": "csv",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "sep": ",",
+        "hdrin": false,
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temperatura,umidade,luminosidade,led",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "223b3be3c75e6da5"
+            ]
+        ]
+    },
+    {
+        "id": "223b3be3c75e6da5",
+        "type": "file",
+        "z": "9b8c2080dc32c8e7",
+        "name": "Arquivo CSV",
+        "filename": "C:/Users/logonrmlocal/Desktop/CSV/log.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 780,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f368f0311796839f",
+        "type": "serial in",
+        "z": "9b8c2080dc32c8e7",
+        "name": "",
+        "serial": "70360b3d896b8ad2",
+        "x": 50,
+        "y": 200,
+        "wires": [
+            [
+                "bdf9fd5e38fe1663"
+            ]
+        ]
+    }
+]
